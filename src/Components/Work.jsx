@@ -15,7 +15,7 @@ function Work() {
   return (
     <div className='w-full'>
         <div className='relative max-w-screen-xl mx-auto text-center'>
-            <h1 className='text-[34vw] leading-none  font-semibold'>Work</h1>
+            <h1 className='text-[32vw] leading-none  font-semibold'>Work</h1>
             <h6>Web Design, Webflow Development, Creative Development.</h6>
             <div className='w-full h-full  absolute top-0'>
                 {images.map((elem,index)=>
