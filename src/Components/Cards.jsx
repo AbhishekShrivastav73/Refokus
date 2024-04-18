@@ -7,7 +7,7 @@ function Cards() {
         <div className='max-w-screen-xl mx-auto flex px-10 gap-1'>
 
             <Card width={'basis-1/3'} start={false} para={true}/>
-            <Card width={'basis-2/3'} start={true} para={false}/>
+            <Card width={'basis-2/3'} start={true} para={false} hover='true'/>
         </div>
     </div>
   )

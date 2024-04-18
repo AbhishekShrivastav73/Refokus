@@ -1,14 +1,42 @@
-import React from 'react'
+import { motion } from "framer-motion";
+import React from "react";
 
-function Marquee({imgsUrl}) {
-  
+function Marquee({ imgsUrl,direction }) {
   return (
-    <div className='flex items-center gap-20 w-full overflow-hidden'>
-        {imgsUrl.map(elem=> <img className='w-24 py-4 h-18 flex-shrink-0' src={elem} alt=''/> )}
-        {imgsUrl.map(elem=> <img className='w-24 py-4 h-18' src={elem} alt=''/> )}
- 
+    <div className="flex items-center w-full relative overflow-hidden">
+      <motion.div
+        initial={{ x: direction === 'left' ? '0' : '-100%' }}
+        animate={{ x: direction === 'left' ? '-100%' : '0' }}
+        transition={{ repeat: Infinity, ease: "linear", duration: 18 }}
+        className="flex gap-20  flex-shrink-0 "
+      >
+        {imgsUrl.map((elem, index) => (
+          <img
+            key={index}
+            className="w-24 py-8 h-18 pr-2 flex-shrink-0"
+            src={elem}
+            alt=""
+          />
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ x: direction === 'left' ? '0' : '-100%' }}
+        animate={{ x: direction === 'left' ? '-100%' : '0' }}
+        transition={{ repeat: Infinity, ease: "linear", duration: 18 }}
+        className="flex gap-20  flex-shrink-0 "
+      >
+        {imgsUrl.map((elem, index) => (
+          <img
+            key={index}
+            className="w-24 py-8 h-18 pr-2 flex-shrink-0"
+            src={elem}
+            alt=""
+          />
+        ))}
+      </motion.div>
+      
     </div>
-  )
+  );
 }
 
-export default Marquee
+export default Marquee;
