@@ -61,36 +61,29 @@ function Products() {
           transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
           className="window w-[30vw] h-[20rem] absolute top-0 left-1/2 -translate-x-[50%] overflow-hidden"
         >
-          <motion.div
+          {[
+            "https://assets-global.website-files.com/6334198f239547f2fccd84c1/650c5f15978b05dc7f2ae554_14.webp",
+            "https://assets-global.website-files.com/6334198f239547f2fccd84c1/65b41324914b470b20ec7d03_Frame%203.png",
+            "https://assets-global.website-files.com/6334198f239547f2fccd84c1/65f1160e50447ddfb490fb59_portfolioCard_cc-02%20(1).webp",
+            "https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10.jpg",
+            "https://assets-global.website-files.com/6334198f239547f2fccd84c1/65b2cab86e8df24e528c4441_Frame%201.png",
+            "https://assets-global.website-files.com/6334198f239547f2fccd84c1/65b41cfab581d98facecc35d_YIR2022%20-%20mobile.png",
+           
+          ].map((items)=>(
+            <motion.div
             animate={{ y: -pos + "rem" }}
-            transition={{ease : [0.76, 0, 0.24, 1],duration : 0.5}}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
             className="w-full h-full bg-sky-100"
-          ></motion.div>
-          <motion.div
-            animate={{ y: -pos + "rem" }}
-            transition={{ease : [0.76, 0, 0.24, 1],duration : 0.5}}
-            className="w-full h-full bg-sky-200"
-          ></motion.div>
-          <motion.div
-            animate={{ y: -pos + "rem" }}
-            transition={{ease : [0.76, 0, 0.24, 1],duration : 0.5}}
-            className="w-full h-full bg-sky-300"
-          ></motion.div>
-          <motion.div
-            animate={{ y: -pos + "rem" }}
-            transition={{ease : [0.76, 0, 0.24, 1],duration : 0.5}}
-            className="w-full h-full bg-sky-400"
-          ></motion.div>
-          <motion.div
-            animate={{ y: -pos + "rem" }}
-            transition={{ease : [0.76, 0, 0.24, 1],duration : 0.5}}
-            className="w-full h-full bg-sky-500"
-          ></motion.div>
-          <motion.div
-            animate={{ y: -pos + "rem" }}
-            transition={{ease : [0.76, 0, 0.24, 1],duration : 0.5}}
-            className="w-full h-full bg-sky-600"
-          ></motion.div>
+          >
+            <img
+              className="w-full h-full object-cover"
+              src={items}
+              alt=""
+              srcset=""
+            />
+          </motion.div>
+          ))}
+         
         </motion.div>
       </div>
     </div>
