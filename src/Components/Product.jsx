@@ -1,10 +1,10 @@
 import React from 'react'
 import Button from './Button'
 
-function Product({val}) {
+function Product({val,mover,count}) {
   return (
     <div className='w-full'>
-        <div className='max-w-screen-xl mx-auto flex items-center justify-between px-16 py-8'>
+        <div onMouseEnter={()=>{mover(count)}} className='max-w-screen-xl mx-auto h-[20rem] flex items-center justify-between px-16'>
             <h1 className='text-4xl font-regular'>{val.title}</h1>
             <div className='w-1/4 flex flex-col gap-4 text-md'>
                 <p>{val.description}</p>
